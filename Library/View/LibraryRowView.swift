@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct LibraryRowView: View {
+    let books: Array<String> = ["Harry Potter", "Percy Jackson"]
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(books, id: \.self) { book in
+                Text(book)
+            }
+        }
     }
 }
 
