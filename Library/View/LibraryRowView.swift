@@ -17,7 +17,6 @@ struct LibraryRowView: View {
                 Text(book)
             }
             Text("Author: Rick Riordan")
-            Text("Current Page Number: 90")
         }
     }
 }
