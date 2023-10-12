@@ -11,7 +11,9 @@ import SwiftUI
 struct LibraryApp: App {
     var body: some Scene {
         WindowGroup {
-            LibraryRowView()
+            NavigationStack {
+                LibraryRowView()
+            }
         }
     }
 }

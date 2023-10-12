@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct LibraryRowView: View {
-    let books: Array<String> = ["Harry Potter", "Percy Jackson"]
+    let book: String = "Percy Jackson: The Sea of Monsters"
 
     var body: some View {
-        List {
-            ForEach(books, id: \.self) { book in
+        VStack {
+            HStack {
+                Image(systemName: "checkmark.circle")
                 Text(book)
             }
+            Text("Author: Rick Riordan")
+            Text("Current Page Number: 90")
         }
     }
 }

@@ -9,10 +9,23 @@ import SwiftUI
 
 struct LibraryView: View {
     var body: some View {
-        Text("Main Library")
+        VStack {
+            Text("Main Library")
+        }
+        .navigationTitle("Book Log 📚")
+        .toolbar {
+            ToolbarItem(placement: ToolbarItemPlacement.topBarLeading) {
+                EditButton()
+            }
+            ToolbarItem(placement: ToolbarItemPlacement.topBarTrailing) {
+                NavigationLink("Add Book", destination: LibraryAddBook())
+            }
+        }
     }
 }
 
 #Preview {
-    LibraryView()
+    NavigationStack {
+        LibraryView()
+    }
 }
