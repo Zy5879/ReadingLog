@@ -12,7 +12,7 @@ struct LibraryApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                LibraryRowView()
+                LibraryView()
             }
         }
     }

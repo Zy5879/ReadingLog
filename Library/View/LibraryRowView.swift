@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct LibraryRowView: View {
-    let book: String = "Percy Jackson: The Sea of Monsters"
-
+    
+    let books: BookModel
+ 
     var body: some View {
         VStack {
             HStack {
                 Image(systemName: "checkmark.circle")
-                Text(book)
+                Text(books.title)
             }
-            Text("Author: Rick Riordan")
+            Text(books.author)
         }
     }
 }
 
 #Preview {
-    LibraryRowView()
+    LibraryRowView(books: BookModel(title: "Percy Jackson: Sea of Theives", author: "Rick Riordan"))
 }
