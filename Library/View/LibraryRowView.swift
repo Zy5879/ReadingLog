@@ -17,7 +17,7 @@ struct LibraryRowView: View {
                 Image(systemName: "checkmark.circle")
                 Text(books.title)
             }
-            Text(books.author)
+            Text("Author: \(books.author) ")
         }
     }
 }

@@ -9,14 +9,18 @@ import SwiftUI
 
 struct LibraryView: View {
     
-//    let books = [
-//        BookModel(title: "Percy Jackson: Sea of Monsters", author: "Rick Riordan"),
-//        BookModel(title: "Harry Potter: Deathly Hallows", author: "J.K. Rowling")
-//    ]
+    let books = [
+        BookModel(title: "Percy Jackson: Sea of Monsters", author: "Rick Riordan"),
+        BookModel(title: "Harry Potter: Deathly Hallows", author: "J.K. Rowling")
+    ]
     
     var body: some View {
         VStack {
-            Text("Main Library")
+            List {
+                ForEach(books) {book in
+                    LibraryRowView(books: book)
+                }
+            }
         }
         .navigationTitle("Book Log 📚")
         .toolbar {
