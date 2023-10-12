@@ -10,8 +10,8 @@ import SwiftUI
 struct LibraryView: View {
     
     let books = [
-        BookModel(title: "Percy Jackson: Sea of Monsters", author: "Rick Riordan"),
-        BookModel(title: "Harry Potter: Deathly Hallows", author: "J.K. Rowling")
+        BookModel(title: "Percy Jackson: Sea of Monsters", author: "Rick Riordan", completed: false),
+        BookModel(title: "Harry Potter: Deathly Hallows", author: "J.K. Rowling", completed: true)
     ]
     
     var body: some View {
@@ -22,6 +22,7 @@ struct LibraryView: View {
                 }
             }
         }
+        .listStyle(PlainListStyle())
         .navigationTitle("Book Log 📚")
         .toolbar {
             ToolbarItem(placement: ToolbarItemPlacement.topBarLeading) {

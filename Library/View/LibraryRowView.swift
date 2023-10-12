@@ -14,8 +14,10 @@ struct LibraryRowView: View {
     var body: some View {
         VStack {
             HStack {
-                Image(systemName: "checkmark.circle")
+                Image(systemName: books.completed ? "checkmark.circle" : "circle")
+                    .foregroundStyle(books.completed ? .green : .red)
                 Text(books.title)
+                    .bold()
             }
             Text("Author: \(books.author) ")
         }
@@ -23,5 +25,5 @@ struct LibraryRowView: View {
 }
 
 #Preview {
-    LibraryRowView(books: BookModel(title: "Percy Jackson: Sea of Theives", author: "Rick Riordan"))
+    LibraryRowView(books: BookModel(title: "Percy Jackson: Sea of Theives", author: "Rick Riordan", completed: false))
 }
