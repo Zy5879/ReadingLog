@@ -9,17 +9,20 @@ import SwiftUI
 
 struct LibraryView: View {
     
-    let books = [
-        BookModel(title: "Percy Jackson: Sea of Monsters", author: "Rick Riordan", completed: false),
-        BookModel(title: "Harry Potter: Deathly Hallows", author: "J.K. Rowling", completed: true)
-    ]
+    @EnvironmentObject var bookViewModel: LibraryViewModel
+    
+//    let books = [
+//        BookModel(title: "Percy Jackson: Sea of Monsters", author: "Rick Riordan", completed: false),
+//        BookModel(title: "Harry Potter: Deathly Hallows", author: "J.K. Rowling", completed: true)
+//    ]
     
     var body: some View {
         VStack {
             List {
-                ForEach(books) {book in
+                ForEach(bookViewModel.books) {book in
                     LibraryRowView(books: book)
                 }
+                
             }
         }
         .listStyle(PlainListStyle())
@@ -39,4 +42,5 @@ struct LibraryView: View {
     NavigationStack {
         LibraryView()
     }
+    .environmentObject(LibraryViewModel())
 }

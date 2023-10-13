@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5704226F2AD8BEB900082836 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704226E2AD8BEB900082836 /* LibraryViewModel.swift */; };
 		5785BDA42AD869E600D6848C /* LibraryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785BDA32AD869E600D6848C /* LibraryApp.swift */; };
 		5785BDA82AD869E900D6848C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5785BDA72AD869E900D6848C /* Assets.xcassets */; };
 		5785BDAB2AD869E900D6848C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5785BDAA2AD869E900D6848C /* Preview Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5704226E2AD8BEB900082836 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		5785BDA02AD869E600D6848C /* Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Library.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5785BDA32AD869E600D6848C /* LibraryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryApp.swift; sourceTree = "<group>"; };
 		5785BDA72AD869E900D6848C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +40,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5704226D2AD8BEA000082836 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5704226E2AD8BEB900082836 /* LibraryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		5785BD972AD869E600D6848C = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +67,7 @@
 		5785BDA22AD869E600D6848C /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				5704226D2AD8BEA000082836 /* ViewModel */,
 				5785BDB82AD88A8500D6848C /* Model */,
 				5785BDB12AD869F800D6848C /* View */,
 				5785BDA32AD869E600D6848C /* LibraryApp.swift */,
@@ -166,6 +177,7 @@
 				5785BDB72AD880BB00D6848C /* LibraryAddBook.swift in Sources */,
 				5785BDA42AD869E600D6848C /* LibraryApp.swift in Sources */,
 				5785BDB52AD86EBE00D6848C /* LibraryView.swift in Sources */,
+				5704226F2AD8BEB900082836 /* LibraryViewModel.swift in Sources */,
 				5785BDB32AD86A0800D6848C /* LibraryRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
