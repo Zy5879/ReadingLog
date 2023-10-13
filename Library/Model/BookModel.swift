@@ -19,4 +19,9 @@ struct BookModel: Identifiable, Codable {
         self.author = author
         self.completed = completed
     }
+    
+    func updateCompletedBook() -> BookModel {
+        return BookModel(id: id, title: title, author: author, completed: !completed)
+    }
+    
 }

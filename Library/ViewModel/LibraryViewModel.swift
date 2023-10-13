@@ -23,4 +23,23 @@ class LibraryViewModel: ObservableObject {
         books.append(contentsOf: newBooks)
     }
     
+    func addBook(title:String, author:String) {
+        let newBook = BookModel(title: title, author: author, completed: false)
+        books.append(newBook)
+    }
+    
+    func moveBook(from: IndexSet, to: Int) {
+        books.move(fromOffsets: from, toOffset: to)
+    }
+    
+    func deleteBook(indexSet: IndexSet) {
+        books.remove(atOffsets: indexSet)
+    }
+    
+    func updateBook(book: BookModel) {
+        if let index = books.firstIndex(where: {$0.id == book.id}) {
+            books[index] = book.updateCompletedBook()
+        }
+    }
+    
 }

@@ -21,9 +21,9 @@ struct LibraryView: View {
             List {
                 ForEach(bookViewModel.books) {book in
                     LibraryRowView(books: book)
-                }
-                
+                }                
             }
+
         }
         .listStyle(PlainListStyle())
         .navigationTitle("Book Log 📚")
