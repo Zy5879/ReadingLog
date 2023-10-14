@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LibraryAddBook: View {
+    @EnvironmentObject var bookViewModel: LibraryViewModel
+    @Environment(\.presentationMode) var presentationMode
     @State var title: String = ""
     @State var author: String = ""
 
@@ -26,9 +28,7 @@ struct LibraryAddBook: View {
                     .padding(.horizontal)
                     .background(Color(UIColor.secondarySystemBackground))
                     .cornerRadius(10)
-                    Button(action: {
-                    
-                }, label: {
+                    Button(action:buttonPress , label: {
                     Text("Save Book")
                 })
                     .frame(height: 55)
@@ -41,6 +41,10 @@ struct LibraryAddBook: View {
             .padding(20)
         }
         .navigationTitle("Add Book 📖")
+    }
+    func buttonPress() {
+        bookViewModel.addBook(title: title, author: author)
+        presentationMode.wrappedValue.dismiss()
     }
 }
 

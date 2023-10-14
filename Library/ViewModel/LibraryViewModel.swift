@@ -17,7 +17,8 @@ class LibraryViewModel: ObservableObject {
     func getItems() {
         let newBooks = [
             BookModel(title: "Percy Jackson: Sea of Monsters", author: "Rick Riordan", completed: false),
-            BookModel(title: "Harry Potter: Deathly Hallows", author: "J.K. Rowling", completed: true)
+            BookModel(title: "Harry Potter: Deathly Hallows", author: "J.K. Rowling", completed: true),
+            BookModel(title: "After we fell", author: "Zaire McAllister", completed: false)
         ]
         
         books.append(contentsOf: newBooks)

@@ -12,15 +12,17 @@ struct LibraryRowView: View {
     let books: BookModel
  
     var body: some View {
-        VStack {
+        VStack(alignment:.leading) {
             HStack {
                 Image(systemName: books.completed ? "checkmark.circle" : "circle")
                     .foregroundStyle(books.completed ? .green : .red)
                 Text(books.title)
                     .bold()
             }
-            Text("Author: \(books.author) ")
+            Text("Author: \(books.author)")
+                
         }
+        
     }
 }
 
