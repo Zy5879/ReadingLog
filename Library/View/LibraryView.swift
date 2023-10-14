@@ -17,20 +17,37 @@ struct LibraryView: View {
 //    ]
     
     var body: some View {
-        VStack {
-            List {
-                ForEach(bookViewModel.books) {book in
-                    LibraryRowView(books: book)
-                        .onTapGesture {
-                            withAnimation(.linear) {
-                                bookViewModel.updateBook(book: book)
+        ZStack {
+            if bookViewModel.books.isEmpty {
+                NoLibraryView()
+            } else {
+                List {
+                    ForEach(bookViewModel.books) {book in
+                        LibraryRowView(books: book)
+                            .onTapGesture {
+                                withAnimation(.linear) {
+                                    bookViewModel.updateBook(book: book)
+                                }
                             }
-                        }
+                    }
+                    .onMove(perform: bookViewModel.moveBook)
+                    .onDelete(perform: bookViewModel.deleteBook)
+                    
                 }
-                .onMove(perform: bookViewModel.moveBook)
-                .onDelete(perform: bookViewModel.deleteBook)
-                
             }
+//            List {
+//                ForEach(bookViewModel.books) {book in
+//                    LibraryRowView(books: book)
+//                        .onTapGesture {
+//                            withAnimation(.linear) {
+//                                bookViewModel.updateBook(book: book)
+//                            }
+//                        }
+//                }
+//                .onMove(perform: bookViewModel.moveBook)
+//                .onDelete(perform: bookViewModel.deleteBook)
+//                
+//            }
 
         }
         .listStyle(PlainListStyle())
