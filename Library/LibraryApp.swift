@@ -9,11 +9,14 @@ import SwiftUI
 
 @main
 struct LibraryApp: App {
+    @StateObject var bookViewModel: LibraryViewModel = LibraryViewModel()
     var body: some Scene {
         WindowGroup {
             NavigationStack {
                 LibraryView()
             }
+            .navigationViewStyle(StackNavigationViewStyle())
+            .environmentObject(bookViewModel)
         }
     }
 }

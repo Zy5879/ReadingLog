@@ -8,20 +8,25 @@
 import Foundation
 
 class LibraryViewModel: ObservableObject {
-    @Published var books: Array<BookModel> = []
+    @Published var books: Array<BookModel> = [] {
+        didSet {
+            savedLibraryItems()
+        }
+    }
+    
+    let libraryKey: String = "library_key"
     
     init() {
-        getItems()
+       getItems()
     }
     
     func getItems() {
-        let newBooks = [
-            BookModel(title: "Percy Jackson: Sea of Monsters", author: "Rick Riordan", completed: false),
-            BookModel(title: "Harry Potter: Deathly Hallows", author: "J.K. Rowling", completed: true),
-            BookModel(title: "After we fell", author: "Zaire McAllister", completed: false)
-        ]
+        guard
+            let data = UserDefaults.standard.data(forKey: libraryKey),
+            let savedBooks = try? JSONDecoder().decode(Array<BookModel>.self, from: data)
+        else {return}
         
-        books.append(contentsOf: newBooks)
+        self.books = savedBooks
     }
     
     func addBook(title:String, author:String) {
@@ -40,6 +45,12 @@ class LibraryViewModel: ObservableObject {
     func updateBook(book: BookModel) {
         if let index = books.firstIndex(where: {$0.id == book.id}) {
             books[index] = book.updateCompletedBook()
+        }
+    }
+    
+    func savedLibraryItems() {
+        if let encoded = try? JSONEncoder().encode(books) {
+            UserDefaults.standard.setValue(encoded, forKey: libraryKey)
         }
     }
     
