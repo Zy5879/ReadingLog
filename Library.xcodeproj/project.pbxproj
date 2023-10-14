@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5704226F2AD8BEB900082836 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704226E2AD8BEB900082836 /* LibraryViewModel.swift */; };
+		5718AE632ADB36770040FD3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5718AE622ADB36770040FD3D /* LaunchScreen.storyboard */; };
 		57252EB62ADA1FEF00182CD6 /* NoLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57252EB52ADA1FEF00182CD6 /* NoLibraryView.swift */; };
 		5785BDA42AD869E600D6848C /* LibraryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785BDA32AD869E600D6848C /* LibraryApp.swift */; };
 		5785BDA82AD869E900D6848C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5785BDA72AD869E900D6848C /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		5704226E2AD8BEB900082836 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		5718AE622ADB36770040FD3D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57252EB52ADA1FEF00182CD6 /* NoLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoLibraryView.swift; sourceTree = "<group>"; };
 		5785BDA02AD869E600D6848C /* Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Library.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5785BDA32AD869E600D6848C /* LibraryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryApp.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		5785BDB12AD869F800D6848C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5718AE622ADB36770040FD3D /* LaunchScreen.storyboard */,
 				5785BDB42AD86EBE00D6848C /* LibraryView.swift */,
 				5785BDB22AD86A0800D6848C /* LibraryRowView.swift */,
 				5785BDB62AD880BB00D6848C /* LibraryAddBook.swift */,
@@ -164,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5718AE632ADB36770040FD3D /* LaunchScreen.storyboard in Resources */,
 				5785BDAB2AD869E900D6848C /* Preview Assets.xcassets in Resources */,
 				5785BDA82AD869E900D6848C /* Assets.xcassets in Resources */,
 			);
@@ -319,9 +323,10 @@
 				DEVELOPMENT_TEAM = NTKNW8YYCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Reading Log";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -348,9 +353,10 @@
 				DEVELOPMENT_TEAM = NTKNW8YYCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Reading Log";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
