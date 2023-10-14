@@ -21,7 +21,15 @@ struct LibraryView: View {
             List {
                 ForEach(bookViewModel.books) {book in
                     LibraryRowView(books: book)
-                }                
+                        .onTapGesture {
+                            withAnimation(.linear) {
+                                bookViewModel.updateBook(book: book)
+                            }
+                        }
+                }
+                .onMove(perform: bookViewModel.moveBook)
+                .onDelete(perform: bookViewModel.deleteBook)
+                
             }
 
         }
